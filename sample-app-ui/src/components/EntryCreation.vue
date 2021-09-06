@@ -53,10 +53,10 @@ export default {
         //         Ansaugschläuche in die entsprechenden externen Behälter stecken",
         //         "textEN":"place suction hoses into appropriate chemical containers"
         //         };
-        await axios.post("/api/EntryItems", param, {
+        await axios.post("https://hobtest2.azurewebsites.net/api/EntryItems", param, {
             headers: {
             Authorization: `Bearer ${token}`,   // send the access token through the 'Authorization' header
-            'Content-Type': 'application/json' 
+            'Content-Type': 'application/json' ,
             },
 
         });
