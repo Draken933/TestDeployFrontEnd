@@ -71,7 +71,7 @@ export default {
     const token = await this.$auth.getTokenSilently();
 
     // Use Axios to make a call to the API
-    const { data } = await axios.get("/api/EntryItems", {
+    const { data } = await axios.get("https://hobtest2.azurewebsites.net/api/EntryItems", {
       headers: {
         Authorization: `Bearer ${token}`    // send the access token through the 'Authorization' header
       }
@@ -97,7 +97,7 @@ export default {
       const token = await this.$auth.getTokenSilently();
 
       // Use Axios to make a call to the API
-      const { data } = await axios.get("/api/EntryItems", {
+      const { data } = await axios.get("https://hobtest2.azurewebsites.net/api/EntryItems", {
         headers: {
           Authorization: `Bearer ${token}`    // send the access token through the 'Authorization' header
         }

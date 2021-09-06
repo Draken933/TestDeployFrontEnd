@@ -95,7 +95,7 @@ export default{
       //         Ansaugschläuche in die entsprechenden externen Behälter stecken",
       //         "textEN":"place suction hoses into appropriate chemical containers"
       //         };
-      await axios.put(("/api/EntryItems/"+ this.Id), param, {
+      await axios.put(("https://hobtest2.azurewebsites.net/api/EntryItems"+ this.Id), param, {
         headers: {
           Authorization: `Bearer ${token}`,   // send the access token through the 'Authorization' header
           'Content-Type': 'application/json' 
@@ -107,7 +107,7 @@ export default{
     async deleteThisEntry(){
       const token = await this.$auth.getTokenSilently();
   
-      await axios.delete(("/api/EntryItems/"+ this.Id),{
+      await axios.delete(("https://hobtest2.azurewebsites.net/api/EntryItems"+ this.Id),{
         headers: {
           Authorization: `Bearer ${token}`,   // send the access token through the 'Authorization' header
           'Content-Type': 'application/json' 
